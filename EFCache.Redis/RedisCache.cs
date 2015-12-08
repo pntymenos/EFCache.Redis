@@ -214,7 +214,7 @@ namespace EFCache.Redis
             {
                 foreach (var endPoint in _database.Multiplexer.GetEndPoints())
                 {
-                    _database.Multiplexer.GetServer(endPoint).FlushDatabase();
+                    _database.Multiplexer.GetServer(endPoint).FlushDatabase(_database.Database);
                 }
             }
 
